@@ -7,6 +7,15 @@ package fr.iutvalence.java.tp.mastermind;
  */
 public class MasterMind
 {
+
+	/**
+	 * méthode permettant de jouer
+	 */
+	public void jouer()
+	{
+		// TODO Auto-generated method stub
+		
+	}
 	
 			
 	
