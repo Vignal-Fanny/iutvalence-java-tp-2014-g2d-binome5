@@ -6,9 +6,9 @@ public class LanceurPartie
 
 	public static void main(String[] args)
 	{	
-		MasterMind jeu = new MasterMind();
+		MasterMind game = new MasterMind();
 		
-		jeu.jouer();
+		game.play();
 	}
 
 }
