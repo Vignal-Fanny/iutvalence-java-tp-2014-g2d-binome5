@@ -9,16 +9,18 @@ public class MasterMind
 {
 	
 	/**
-	 * le joueur principal (il doit décrypter le code)
+	 * Le joueur principal (il doit décrypter le code)
 	 */
 	private Player player;
+	
 	/**
-	 * le maitre du jeu (il choisit le code)
+	 * Le maitre du jeu (il choisit le code)
 	 */
 	private Master master;
 
+	// TODO écrire un commentaire plus précis
 	/**
-	 * crée une partie de Mastermind prête à être jouée.
+	 * Crée une partie de Mastermind prête à être jouée.
 	 */
 	public MasterMind()
 	{
@@ -29,12 +31,9 @@ public class MasterMind
 	/**
 	 * méthode permettant de jouer
 	 */
-	public void play()
+	public void jouer()
 	{
 		master.placerPions();
-		
 	}
-	
-			
-	
+
 }
