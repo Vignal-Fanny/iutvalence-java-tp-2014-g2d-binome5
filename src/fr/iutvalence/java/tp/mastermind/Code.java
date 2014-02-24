@@ -27,9 +27,5 @@ public class Code
 
 	}
 	
-	public Code getCode()
-	{
-		return this;
-	}
 }
 
