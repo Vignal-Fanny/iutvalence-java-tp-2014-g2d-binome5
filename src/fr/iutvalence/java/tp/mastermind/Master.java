@@ -12,6 +12,6 @@ public class Master
 	 */
 	public Code obtainCode()
 	{
-		
+		return Code.getCode();
 	}
 }
