@@ -1,14 +1,19 @@
 package fr.iutvalence.java.tp.mastermind;
 
-//TODO écrire un commentaire
+/**
+ * Fait débuter la partie
+ */
 public class LanceurPartie
 {
-	// TODO écrire un commentaire
+	/**
+	 * Fonction principale du jeu. C'est la base du jeu. 
+	 * @param args
+	 */
 	public static void main(String[] args)
 	{	
 		MasterMind game = new MasterMind();
 		
-		game.jouer();
+		game.play();
 	}
 
 }

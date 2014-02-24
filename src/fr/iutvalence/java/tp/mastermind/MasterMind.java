@@ -18,9 +18,9 @@ public class MasterMind
 	 */
 	private Master master;
 
-	// TODO écrire un commentaire plus précis
 	/**
-	 * Crée une partie de Mastermind prête à être jouée.
+	 * Crée une partie de Mastermind prête à être jouée. Défini tous les éléments
+	 *  nécessaires à la partie. 
 	 */
 	public MasterMind()
 	{
@@ -31,9 +31,9 @@ public class MasterMind
 	/**
 	 * méthode permettant de jouer
 	 */
-	public void jouer()
+	public void play()
 	{
-		master.placerPions();
+		Code toBeGuessedCode = this.master.obtainCode();
 	}
 
 }
