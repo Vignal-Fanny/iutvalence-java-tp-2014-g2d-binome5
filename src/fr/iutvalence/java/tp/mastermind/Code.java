@@ -11,12 +11,14 @@ public class Code
 	 * Un code, c'est un tableau de pions.
 	 */
 	public Pawn[] code;
+	
 	/**
 	 * Constructeur de la classe Code, qui génère un code formé de 4 pions, de
 	 * différentes (ou non) couleurs, choisis aléatoirement.  
 	 */
 	public Code()
 	{
+		// TODO définir 4 comme une constante
 		this.code = new Pawn[4];
 		Random randomNumberGenerator = new Random();
 		for ( int i = 0; i <= 3; i++)

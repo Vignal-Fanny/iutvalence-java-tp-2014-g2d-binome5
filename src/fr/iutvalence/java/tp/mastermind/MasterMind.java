@@ -19,7 +19,7 @@ public class MasterMind
 	private Master master;
 
 	/**
-	 * Crée une partie de Mastermind prête à être jouée. Défini tous les éléments
+	 * Crée une partie de Mastermind prête à être jouée. Définit tous les éléments
 	 *  nécessaires à la partie. 
 	 */
 	public MasterMind()
@@ -28,6 +28,7 @@ public class MasterMind
 		this.player = new Player();
 	}
 	
+	// TODO corriger le commentaire (méthode est superflu)
 	/**
 	 * méthode permettant de jouer
 	 */
