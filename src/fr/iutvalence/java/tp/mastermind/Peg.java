@@ -7,6 +7,9 @@ package fr.iutvalence.java.tp.mastermind;
  */
 public class Peg
 {
+	/**
+	 * Un pion est défini par sa couleur alors nous créons un attribut color puis son constructeur
+	 */
 	private final Color color;
 	
 	/**

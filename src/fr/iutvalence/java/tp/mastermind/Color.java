@@ -40,7 +40,7 @@ public enum Color
 	VIOLET("V");
 
 	/**
-	 * colorText va nous permettre de donner à nos couleurs un texte qui s'affichera
+	 * colorText va nous permettre de donner à nos couleurs une représentation texte qui s'affichera
 	 */
 	private String colorText;
 
