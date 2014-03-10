@@ -34,6 +34,7 @@ public class MasterMind
 	public void play()
 	{
 		Code toBeGuessedCode = this.master.obtainCode();
+		System.out.println(toBeGuessedCode);
 	}
 
 }

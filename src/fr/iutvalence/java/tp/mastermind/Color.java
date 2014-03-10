@@ -1,8 +1,11 @@
 package fr.iutvalence.java.tp.mastermind;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 /**
- * @author Vignal Fanny and Woerly-Moussier Joachim
- *	énumération des couleurs des pions jouables
+ * @author Vignal Fanny and Woerly-Moussier Joachim énumération des couleurs des
+ *         pions jouables
  */
 
 public enum Color
@@ -10,38 +13,59 @@ public enum Color
 	/**
 	 * la couleur bleue
 	 */
-	BLUE,
+	BLUE("B"),
 	/**
 	 * la couleur rouge
 	 */
-	RED,
+	RED("R"),
 	/**
 	 * la couleur verte
 	 */
-	GREEN,
+	GREEN("G"),
 	/**
 	 * la couleur jaune
 	 */
-	YELLOW,
+	YELLOW("Y"),
 	/**
 	 * la couleur orange
 	 */
-	ORANGE,
+	ORANGE("O"),
 	/**
 	 * la couleur rose
 	 */
-	PINK,
+	PINK("P"),
 	/**
 	 * la couleur violette
 	 */
-	VIOLET,
+	VIOLET("V");
+
 	/**
-	 * la couleur blanche
+	 * colorText va nous permettre de donner à nos couleurs un texte qui s'affichera
 	 */
-	WHITE,
+	private String colorText;
+
 	/**
-	 * la couleur noire
+	 * @param colorText Constructeur qui permet de contruire colorText
 	 */
-	BLACK;
+	private Color(String colorText)
+	{
+		this.colorText = colorText;
+	}
+
+	/**
+	 * @return Permet d'obtenir une couleur de manière aléatoire parmis les couleurs de l'énumération.
+	 */
+	public static Color getRandomColor()
+	{
+		int random = new Random().nextInt(Color.values().length);
+		return (Color.values()[random]);
+	}
+
+	@Override
+	public String toString()
+	{
+		return this.colorText;
+	}
+	
 	
 }
