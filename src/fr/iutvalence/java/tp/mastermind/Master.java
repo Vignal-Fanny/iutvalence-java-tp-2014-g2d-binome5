@@ -9,9 +9,9 @@ package fr.iutvalence.java.tp.mastermind;
  */
 public class Master
 {
-	// TODO écrire un commentaire plus précis (en fonction de l'implémentation actuelle)
+
 	/**
-	 * génération du code
+	 * méthode permettant de générer aléatoirement un code
 	 * @return le code généré
 	 */
 	public Code obtainCode()

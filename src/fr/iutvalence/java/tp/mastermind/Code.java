@@ -8,6 +8,11 @@ import java.util.Random;
 public class Code
 {
 	/**
+	 * constante définissant le nombre de pions dans un code.
+	 */
+	public final static int NUMBER_OF_PEGS_IN_THE_CODE = 4;
+	
+	/**
 	 * Un code, c'est un tableau de pions.
 	 */
 	public Pegs[] code;
@@ -18,8 +23,7 @@ public class Code
 	 */
 	public Code()
 	{
-		// TODO définir 4 comme une constante
-		this.code = new Pegs[4];
+		this.code = new Pegs[NUMBER_OF_PEGS_IN_THE_CODE];
 		Random randomNumberGenerator = new Random();
 		for ( int i = 0; i <= 3; i++)
 		{

@@ -27,10 +27,9 @@ public class MasterMind
 		this.master = new Master();
 		this.player = new Player();
 	}
-	
-	// TODO corriger le commentaire (méthode est superflu)
+
 	/**
-	 * méthode permettant de jouer
+	 * méthode permettant de jouer en cherchant le code.
 	 */
 	public void play()
 	{
