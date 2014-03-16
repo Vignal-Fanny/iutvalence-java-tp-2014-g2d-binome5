@@ -1,7 +1,6 @@
 package fr.iutvalence.java.tp.mastermind;
 
-import java.util.Random;
-
+// TODO écrire un commentaire plus précis
 /**
  * Représente un code.
  * 

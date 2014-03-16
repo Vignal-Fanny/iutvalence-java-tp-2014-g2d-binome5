@@ -1,6 +1,5 @@
 package fr.iutvalence.java.tp.mastermind;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -39,11 +38,13 @@ public enum Color
 	 */
 	VIOLET("V");
 
+	// TODO écrire un commentaire plus concis
 	/**
 	 * colorText va nous permettre de donner à nos couleurs une représentation texte qui s'affichera
 	 */
 	private String colorText;
 
+	// TODO compléter le commentaire
 	/**
 	 * @param colorText Constructeur qui permet de contruire colorText
 	 */
@@ -52,6 +53,7 @@ public enum Color
 		this.colorText = colorText;
 	}
 
+	// TODO compléter le commentaire
 	/**
 	 * @return Permet d'obtenir une couleur de manière aléatoire parmis les couleurs de l'énumération.
 	 */
@@ -65,7 +67,5 @@ public enum Color
 	public String toString()
 	{
 		return this.colorText;
-	}
-	
-	
+	}	
 }

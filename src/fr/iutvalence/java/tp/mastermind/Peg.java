@@ -7,6 +7,7 @@ package fr.iutvalence.java.tp.mastermind;
  */
 public class Peg
 {
+	// TODO écrire un commentaire plus concis
 	/**
 	 * Un pion est défini par sa couleur alors nous créons un attribut color puis son constructeur
 	 */
@@ -16,7 +17,6 @@ public class Peg
 	 * construit un pion à partir d'un numéro qui définit la couleur du pion.
 	 * @param initialColor la couleur du pion définie via l'énumération Color.
 	 */
-	
 	public Peg(Color initialColor)
 	{
 		this.color = initialColor;

@@ -18,6 +18,7 @@ public class MasterMind
 	 */
 	private Master master;
 
+	// TODO écrire un commentaire plus précis (comment est initailisée la partie ?)
 	/**
 	 * Crée une partie de Mastermind prête à être jouée. Définit tous les éléments
 	 *  nécessaires à la partie. 
