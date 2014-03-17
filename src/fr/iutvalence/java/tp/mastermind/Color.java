@@ -38,24 +38,25 @@ public enum Color
 	 */
 	VIOLET("V");
 
-	// TODO écrire un commentaire plus concis
 	/**
-	 * colorText va nous permettre de donner à nos couleurs une représentation texte qui s'affichera
+	 * colorText donne une représentation texte aux couleurs.
 	 */
 	private String colorText;
 
-	// TODO compléter le commentaire
+
 	/**
-	 * @param colorText Constructeur qui permet de contruire colorText
+	 * Constructeur qui permet de construire colorText à partir d'une lettre de couleur.
+	 * @param colorText la lettre de la couleur.
 	 */
 	private Color(String colorText)
 	{
 		this.colorText = colorText;
 	}
 
-	// TODO compléter le commentaire
+
 	/**
-	 * @return Permet d'obtenir une couleur de manière aléatoire parmis les couleurs de l'énumération.
+	 * Permet d'obtenir une couleur de manière aléatoire parmis les couleurs de l'énumération.
+	 * @return la couleur récupérée aléatoirement
 	 */
 	public static Color getRandomColor()
 	{

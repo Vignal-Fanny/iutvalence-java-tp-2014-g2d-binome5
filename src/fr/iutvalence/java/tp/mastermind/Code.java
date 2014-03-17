@@ -35,10 +35,30 @@ public class Code
 	public String toString()
 	{
 		String result = "";
-		for (int pegNumber = 0; pegNumber <= NUMBER_OF_PEGS_IN_THE_CODE; pegNumber++)
+		for (int pegNumber = 0; pegNumber < NUMBER_OF_PEGS_IN_THE_CODE; pegNumber++)
 			result = result + this.pegs[pegNumber].toString();
 
 		return result;
+	}
+
+	public ResultOfCodeComparison compareWith(Code attemptToGuessTheCode)
+	{
+		int numberOfWellPlacedPegs = 0;
+		int numberOfMisplacedPegs = 0;
+		int i,j;
+		i=0;
+		j=0;
+		
+		while(i<this.NUMBER_OF_PEGS_IN_THE_CODE)
+		{
+			while(j<this.NUMBER_OF_PEGS_IN_THE_CODE)
+			{
+				if(this.pegs[i] == attemptToGuessTheCode.pegs[i])
+					numberOfWellPlacedPegs++;
+			}
+		}
+		
+		return new ResultOfCodeComparison(numberOfWellPlacedPegs, numberOfMisplacedPegs);
 	}
 
 }
