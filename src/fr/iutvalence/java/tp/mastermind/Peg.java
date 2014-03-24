@@ -21,15 +21,27 @@ public class Peg
 	{
 		this.color = initialColor;
 	}
+	
+	
+
+	/**
+	 * pour obtenir la couleur du pion.
+	 * @return la couleur du pion.
+	 */
+	public Color getColor()
+	{
+		return this.color;
+	}
+
+
 
 	@Override
 	public String toString()
 	{
 		return this.color.toString();
 	}
-	
-	
 
+	
 }
 
 

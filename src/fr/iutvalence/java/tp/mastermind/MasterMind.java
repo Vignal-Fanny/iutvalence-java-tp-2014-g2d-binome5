@@ -24,14 +24,22 @@ public class MasterMind
 	 */
 	public final static int MAXIMUM_NUMBER_OF_TURNS = 10;
 
+	/**
+	 * le code à deviner.
+	 */
 	private Code toBeGuessedCode;
 
+	/**
+	 * le nombre de tours.
+	 */
 	private int numberOfTurns;
 
+	/**
+	 * l'état du jeu.
+	 */
 	private GameStatus gameStatus;
 
-	// TODO écrire un commentaire plus précis (comment est initailisée la partie
-	// ?)
+	// TODO écrire un commentaire plus précis (comment est initailisée la partie ?)
 	/**
 	 * Crée une partie de Mastermind prête à être jouée. Définit tous les
 	 * éléments nécessaires à la partie.
@@ -49,7 +57,6 @@ public class MasterMind
 	/**
 	 * un tour de jeu.
 	 * 
-	 * @return état du jeu à la fin du tour.
 	 */
 	private void playTurnAndUpdateGameStatus()
 	{
@@ -63,12 +70,9 @@ public class MasterMind
 		System.out.println(attemptToGuessTheCode);
 
 		ResultOfCodeComparison codeComparison = this.toBeGuessedCode.compareWith(attemptToGuessTheCode);
-		
+		System.out.println(codeComparison);
 		if (codeComparison.areSameCodes())
 			this.gameStatus = GameStatus.WON;
-		
-		// comparison.getWellPlaced();
-		//  comparison.getMisplaced();
 		this.numberOfTurns++;
 	}
 
@@ -80,20 +84,18 @@ public class MasterMind
 		this.gameStatus = GameStatus.RUNNING;
 		this.numberOfTurns = 1;
 		this.toBeGuessedCode = this.master.obtainCode();
-		System.out.println(toBeGuessedCode);
+		System.out.println(this.toBeGuessedCode);
 
 		while (this.gameStatus == GameStatus.RUNNING)
 		{
 			this.playTurnAndUpdateGameStatus();
 		}
 
-		// faire quelque chose à la fin de la partie
-
-		if (gameStatus == GameStatus.LOST)
+		if (this.gameStatus == GameStatus.LOST)
 		{
 			System.out.println("Game status = YOU LOST THE GAME !! POOR LITTLE THING è_é ");
 		}
-		if (gameStatus == GameStatus.WON)
+		if (this.gameStatus == GameStatus.WON)
 		{
 			System.out
 					.println("Game status = 'Success ! You won ! Such a good boy <3 <or girl, yeah we didn't forget you>");

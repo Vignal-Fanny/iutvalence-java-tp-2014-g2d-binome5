@@ -14,6 +14,8 @@ public class Player
 	 */
 	public Code obtainCode()
 	{
+		//Peg[] chosenPegs = new Peg[Code.NUMBER_OF_PEGS_IN_THE_CODE];
+		
 		return new Code();
 	}
 }
