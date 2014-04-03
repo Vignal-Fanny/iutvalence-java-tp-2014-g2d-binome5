@@ -3,7 +3,7 @@ package fr.iutvalence.java.tp.mastermind;
 /**
  * Fait débuter la partie
  */
-public class LanceurPartie
+public class LanceurPartieAvecMaitreAleatoireEtJoueurAleatoire
 {
 	/**
 	 * Fonction principale du jeu. C'est la base du jeu. 
@@ -11,7 +11,7 @@ public class LanceurPartie
 	 */
 	public static void main(String[] args)
 	{	
-		MasterMind game = new MasterMind();
+		MasterMind game = new MasterMind(new RandomPlayer(), new RandomPlayer(), null);
 		
 		game.play();
 	}

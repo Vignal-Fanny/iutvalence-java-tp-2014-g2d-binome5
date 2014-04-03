@@ -1,8 +1,9 @@
 package fr.iutvalence.java.tp.mastermind;
 
 /**
+ *  Les résultats des comparaisons de code sont sous cette forme.
  * @author Vignal Fanny & Woerly-Moussier Joachim
- * Les résultats des comparaisons de code sont sous cette forme.
+ *
  */
 public class ResultOfCodeComparison
 {

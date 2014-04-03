@@ -63,6 +63,20 @@ public enum Color
 		int random = new Random().nextInt(Color.values().length);
 		return (Color.values()[random]);
 	}
+	
+	/**
+	 * Revoie une couleur depuis la lettre qui lui est associée.
+	 * @param character la lettre donnée.
+	 * @return la couleur correspondante.
+	 */
+	public static Color parseColor(char character)
+	{
+		for (int colorNumber=0;colorNumber<Color.values().length; colorNumber++)
+			if (Color.values()[colorNumber].colorText.equals(""+character)) return Color.values()[colorNumber];
+		// TODO exception ?
+		return null;
+			
+	}
 
 	@Override
 	public String toString()

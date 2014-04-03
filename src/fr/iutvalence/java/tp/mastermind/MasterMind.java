@@ -17,7 +17,7 @@ public class MasterMind
 	/**
 	 * Le maitre du jeu (il choisit le code)
 	 */
-	private Master master;
+	private Player master;
 
 	/**
 	 * nombre maximum possible de tours pour une partie.
@@ -38,20 +38,33 @@ public class MasterMind
 	 * l'état du jeu.
 	 */
 	private GameStatus gameStatus;
+	
+	/**
+	 * l'afficheur du jeu.
+	 */
+	private Display display;
 
-	// TODO écrire un commentaire plus précis (comment est initailisée la partie ?)
+	// TODO écrire un commentaire plus précis (comment est initailisée la partie
+	// ?)
 	/**
 	 * Crée une partie de Mastermind prête à être jouée. Définit tous les
 	 * éléments nécessaires à la partie.
 	 */
 
-	public MasterMind()
+	/**
+	 * @param master le joueur entrant le code
+	 * @param player le joueur devant trouver le code
+	 * @param display l'afficheur du jeu
+	 */
+	public MasterMind(Player master, Player player, Display display)
 	{
-		this.master = new Master();
-		this.player = new Player();
+		this.master = master;
+		this.player = player;
 		this.toBeGuessedCode = null;
 		this.numberOfTurns = 0;
 		this.gameStatus = GameStatus.NOT_RUNNING;
+		this.display = display;
+				
 	}
 
 	/**
@@ -63,14 +76,21 @@ public class MasterMind
 		if (this.numberOfTurns > MAXIMUM_NUMBER_OF_TURNS)
 		{
 			this.gameStatus = GameStatus.LOST;
+			this.display.notifyEndOfGame(this.gameStatus, this.toBeGuessedCode);
 			return;
 		}
-		
-		Code attemptToGuessTheCode = this.player.obtainCode();
-		System.out.println(attemptToGuessTheCode);
 
+		Code attemptToGuessTheCode;
+		while (true)
+		{
+			this.display.notifyNewTurn(this.numberOfTurns);
+			attemptToGuessTheCode = this.player.obtainCode();
+			if (attemptToGuessTheCode != null)
+				break;
+		}
 		ResultOfCodeComparison codeComparison = this.toBeGuessedCode.compareWith(attemptToGuessTheCode);
-		System.out.println(codeComparison);
+		TurnInfo turnInfo = new TurnInfo(attemptToGuessTheCode, codeComparison);
+		this.display.displayTurnInfo(turnInfo);
 		if (codeComparison.areSameCodes())
 			this.gameStatus = GameStatus.WON;
 		this.numberOfTurns++;
@@ -84,22 +104,13 @@ public class MasterMind
 		this.gameStatus = GameStatus.RUNNING;
 		this.numberOfTurns = 1;
 		this.toBeGuessedCode = this.master.obtainCode();
-		System.out.println(this.toBeGuessedCode);
-
+		
 		while (this.gameStatus == GameStatus.RUNNING)
 		{
 			this.playTurnAndUpdateGameStatus();
 		}
 
-		if (this.gameStatus == GameStatus.LOST)
-		{
-			System.out.println("Game status = YOU LOST THE GAME !! POOR LITTLE THING è_é ");
-		}
-		if (this.gameStatus == GameStatus.WON)
-		{
-			System.out
-					.println("Game status = 'Success ! You won ! Such a good boy <3 <or girl, yeah we didn't forget you>");
-		}
+	
 	}
 
 }

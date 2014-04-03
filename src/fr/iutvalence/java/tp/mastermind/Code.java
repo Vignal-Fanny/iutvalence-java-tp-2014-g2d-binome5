@@ -7,6 +7,14 @@ package fr.iutvalence.java.tp.mastermind;
  * @author Woerly-Moussier Joachim, Vignal Fanny
  * 
  */
+/**
+ * @author vignalfa
+ *
+ */
+/**
+ * @author vignalfa
+ *
+ */
 public class Code
 {
 	/**
@@ -43,6 +51,17 @@ public class Code
 			this.pegs[pegNumber] = new Peg(Color.getRandomColor());
 	}
 
+	/**
+	 * Pour générer un code.
+	 * @return un code.
+	 */
+	public Code createCode()
+	{
+		
+		Code theCode = new Code();
+		return theCode;
+	}
+	
 	@Override
 	public String toString()
 	{

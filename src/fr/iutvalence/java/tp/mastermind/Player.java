@@ -1,21 +1,15 @@
 package fr.iutvalence.java.tp.mastermind;
 
 /**
- * Il s'agit de la classe du joueur qui va devoir deviner le code du Master durant la partie. 
+ * Interface définissant le comportement attendu d'un joueur
  * @author Woerly-Moussier Joachim, Vignal Fanny
  *
  */
-public class Player
+public interface Player
 {
 	/**
-	 * méthode permettant de générer aléatoirement un code (temporaire, on passera à une méthode 
-	 * permettant d'écrire soi même le code)
-	 * @return le code généré
+	 * Obtenir le code proposé par le joueur
+	 * @return  le code proposé par le joueur
 	 */
-	public Code obtainCode()
-	{
-		//Peg[] chosenPegs = new Peg[Code.NUMBER_OF_PEGS_IN_THE_CODE];
-		
-		return new Code();
-	}
+	public Code obtainCode();
 }
