@@ -5,7 +5,7 @@ package fr.iutvalence.java.tp.mastermind;
  * @author vignalfa
  *
  */
-public abstract class ConsoleDisplay implements Display
+public class ConsoleDisplay implements Display
 {
 	/**
 	 * @see fr.iutvalence.java.tp.mastermind.Display#displayTurnInfo(fr.iutvalence.java.tp.mastermind.TurnInfo)
@@ -19,7 +19,8 @@ public abstract class ConsoleDisplay implements Display
 	@Override
 	public void notifyNewTurn(int TurnNumber)
 	{
-		System.out.println(TurnNumber+"/"+MasterMind.MAXIMUM_NUMBER_OF_TURNS);
+		System.out.println("Turn "+TurnNumber+"/"+MasterMind.MAXIMUM_NUMBER_OF_TURNS);
+		System.out.println("Enter your proposition");
 		
 	}
 

@@ -30,8 +30,6 @@ public class Code
 	/**
 	 * Constructeur de la classe Code, qui génère un code formé de 4 pions, de
 	 * différentes (ou non) couleurs, choisis aléatoirement.
-	 */
-	/**
 	 * @param pegs créer un code à partir d'un tableau de pions.
 	 */
 	public Code(Peg[] pegs)
@@ -115,11 +113,30 @@ public class Code
 					numberOfMisplacedPegs++;
 					pegsToProcessInCurrentCode[pegNumberInCurrentCode] = false;
 					pegsToProcessInAttempToGuessTheCode[pegNumberInAttemptToGuessCode] = false;
+					break;
 				}
 			}
 		}
 				
 		return new ResultOfCodeComparison(numberOfWellPlacedPegs, numberOfMisplacedPegs);
+	}
+
+	/**
+	 * Fonction retournant un code à partir d'une ligne de texte
+	 * @param textLine la ligne de texte entrée en paramètre à transformer en code
+	 * @return Un code 
+	 */
+	public static Code parseCode(String textLine)
+	{
+		Peg[] pegs = new Peg[Code.NUMBER_OF_PEGS_IN_THE_CODE];
+		
+		for (int charNumber=0;charNumber<textLine.length(); charNumber++)
+		{
+			Color color = Color.parseColor(textLine.charAt(charNumber));
+			if (color == null) return null;
+			pegs[charNumber] = new Peg(color);
+		}
+		return new Code(pegs);
 	}
 
 	

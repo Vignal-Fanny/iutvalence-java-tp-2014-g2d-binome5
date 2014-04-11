@@ -3,7 +3,7 @@ package fr.iutvalence.java.tp.mastermind;
 /**
  * Fait débuter la partie
  */
-public class LanceurPartieAvecMaitreAleatoireEtJoueurConsole
+public class LanceurPartieAvecMaitreDeterministeEtJoueurConsole
 {
 	/**
 	 * Fonction principale du jeu. C'est la base du jeu. 
@@ -11,7 +11,7 @@ public class LanceurPartieAvecMaitreAleatoireEtJoueurConsole
 	 */
 	public static void main(String[] args)
 	{	
-		MasterMind game = new MasterMind(new RandomPlayer(), new ConsolePlayer(), new ConsoleDisplay());
+		MasterMind game = new MasterMind(new MockPlayer(Code.parseCode("ROPO")), new ConsolePlayer(), new ConsoleDisplay());
 		game.play();
 	}
 

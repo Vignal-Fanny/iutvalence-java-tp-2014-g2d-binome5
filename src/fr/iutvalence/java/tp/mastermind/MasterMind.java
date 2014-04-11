@@ -76,7 +76,6 @@ public class MasterMind
 		if (this.numberOfTurns > MAXIMUM_NUMBER_OF_TURNS)
 		{
 			this.gameStatus = GameStatus.LOST;
-			this.display.notifyEndOfGame(this.gameStatus, this.toBeGuessedCode);
 			return;
 		}
 
@@ -92,7 +91,9 @@ public class MasterMind
 		TurnInfo turnInfo = new TurnInfo(attemptToGuessTheCode, codeComparison);
 		this.display.displayTurnInfo(turnInfo);
 		if (codeComparison.areSameCodes())
+			{
 			this.gameStatus = GameStatus.WON;
+			}
 		this.numberOfTurns++;
 	}
 
@@ -109,7 +110,7 @@ public class MasterMind
 		{
 			this.playTurnAndUpdateGameStatus();
 		}
-
+		this.display.notifyEndOfGame(this.gameStatus, this.toBeGuessedCode);
 	
 	}
 

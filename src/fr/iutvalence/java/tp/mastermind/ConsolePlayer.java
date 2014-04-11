@@ -41,15 +41,7 @@ public class ConsolePlayer implements Player
 		{
 			return null;
 		}
-		Peg[] pegs = new Peg[Code.NUMBER_OF_PEGS_IN_THE_CODE];
-		
-		for (int charNumber=0;charNumber<textLine.length(); charNumber++)
-		{
-			Color color = Color.parseColor(textLine.charAt(charNumber));
-			if (color == null) return null;
-			pegs[charNumber] = new Peg(color);
-		}
-		return new Code(pegs);
+		return Code.parseCode(textLine);
 	}
 
 }
