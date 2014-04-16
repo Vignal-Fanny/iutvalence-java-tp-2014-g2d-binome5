@@ -22,7 +22,7 @@ public class MasterMind
 	/**
 	 * nombre maximum possible de tours pour une partie.
 	 */
-	public final static int MAXIMUM_NUMBER_OF_TURNS = 10;
+	public final static int MAXIMUM_NUMBER_OF_TURNS = 15;
 
 	/**
 	 * le code à deviner.
@@ -43,15 +43,9 @@ public class MasterMind
 	 * l'afficheur du jeu.
 	 */
 	private Display display;
-
-	// TODO écrire un commentaire plus précis (comment est initailisée la partie
-	// ?)
 	/**
 	 * Crée une partie de Mastermind prête à être jouée. Définit tous les
-	 * éléments nécessaires à la partie.
-	 */
-
-	/**
+	 * éléments nécessaires à la partie
 	 * @param master le joueur entrant le code
 	 * @param player le joueur devant trouver le code
 	 * @param display l'afficheur du jeu

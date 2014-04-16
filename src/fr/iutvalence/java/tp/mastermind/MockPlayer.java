@@ -7,9 +7,16 @@ package fr.iutvalence.java.tp.mastermind;
  */
 public class MockPlayer implements Player
 {
+	/**
+	 * blablabla
+	 */
 	private final Code codeToBeReturned;
 	
 
+	/**
+	 * blabla
+	 * @param codeToBeReturned blablabla
+	 */
 	public MockPlayer(Code codeToBeReturned)
 	{
 		this.codeToBeReturned = codeToBeReturned;

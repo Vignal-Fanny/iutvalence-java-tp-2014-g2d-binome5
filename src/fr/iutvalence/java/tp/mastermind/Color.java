@@ -73,7 +73,6 @@ public enum Color
 	{
 		for (int colorNumber=0;colorNumber<Color.values().length; colorNumber++)
 			if (Color.values()[colorNumber].colorText.equals(""+character)) return Color.values()[colorNumber];
-		// TODO exception ?
 		return null;
 			
 	}
