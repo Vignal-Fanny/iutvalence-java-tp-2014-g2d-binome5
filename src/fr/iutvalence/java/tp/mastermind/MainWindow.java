@@ -11,7 +11,7 @@ import javax.swing.WindowConstants;
 public class MainWindow
 {
 	
-	private JButton button; 
+	private ColorButton button; 
 	/**
 	 * La fenêtre de l'application
 	 */
@@ -27,6 +27,7 @@ public class MainWindow
 	this.window.setSize(500, 400);
 	this.window.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 	this.button =  new ColorButton();
+	this.button.addActionListener(this.button);
 	this.window.getContentPane().add(button);
 	this.window.setVisible(true);
 	
