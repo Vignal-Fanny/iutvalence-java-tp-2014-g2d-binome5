@@ -3,14 +3,14 @@ package fr.iutvalence.java.tp.mastermind;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
+import javax.swing.JPanel;
 
 /**
  * @author Woerly Moussier Joachim, Vignal Fanny
  * Classe MainWindow qui permet de créer une nouvelle fenêtre d'application. 
  */
-public class MainWindow
+public class MainWindow extends JFrame
 {
-	
 	private ColorButton button; 
 	/**
 	 * La fenêtre de l'application
@@ -27,13 +27,14 @@ public class MainWindow
 	this.window.setSize(500, 400);
 	this.window.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 	this.button =  new ColorButton();
-	this.button.addActionListener(this.button);
-	this.window.getContentPane().add(button);
-	this.window.setVisible(true);
+    this.button.addActionListener(this.button);
+ 	this.window.getContentPane().add(this.button);
+ 	this.window.setVisible(true);
 	
 	}
 	
 	/**
+	 * 
 	 * Fonction qui permet d'obtenir une fenêtre
 	 * @return une fenêtre
 	 */
@@ -41,5 +42,5 @@ public class MainWindow
 	{
 		return this.window;
 	}
-	
+
 }

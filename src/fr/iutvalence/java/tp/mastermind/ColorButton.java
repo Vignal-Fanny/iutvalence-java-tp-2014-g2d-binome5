@@ -72,6 +72,7 @@ public class ColorButton extends JButton implements ActionListener
 	public void paintComponent(Graphics g){
 		Graphics2D g2d = (Graphics2D)g;
 		g2d.setColor(this.colorConverter(this.colorOfTheButton));
-		g2d.fillRect(0, 0, this.getWidth(), this.getHeight());
+		g2d.fillRect(0, 0, this.getWidth(), this.getHeight()); //Si on veut un bouton rectangulaire
+		//g.fillOval(20, 20, 75, 75); plus tard nous mettrons la partie colorée du bouton dans un oval le reste du bouton n'apparaîtra pas. Nous devons changer les dimensions de l'oval 
 	}
 }
