@@ -9,17 +9,33 @@ import javax.swing.JButton;
 
 import fr.iutvalence.java.tp.mastermind.Color;
 
+/**
+ * @author vignalfa
+ *Class qui permet de créer un bouton coloré
+ */
 public class ColorButton extends JButton implements ActionListener
 {
+	/**
+	 * Attribut couleur d'un bouton
+	 */
 	private Color colorOfTheButton;
+	/**
+	 * variable qui permet de se placer dans un tableau de couleur
+	 */
 	private int index =0;
 
 
+	/**
+	 * Construit un bouton avec une couleur
+	 */
 	public ColorButton()
 	{
 		this.colorOfTheButton= Color.values()[this.index];
 	}
 	
+	/**
+	 * méthode qui permet de changer de couleur de bouton au clic
+	 */
 	public void onClick()
 	{
 		this.index ++;
@@ -35,6 +51,11 @@ public class ColorButton extends JButton implements ActionListener
 		
 	}
 	
+	/**
+	 * Permet de convertir les couleurs de notre classe color en couleurs java.awt.Color
+	 * @param pegColor un pion de couleur
+	 * @return une couleur
+	 */
 	public java.awt.Color colorConverter(Color pegColor)
 		  {
 			if(pegColor==Color.BLUE) return java.awt.Color.BLUE;
