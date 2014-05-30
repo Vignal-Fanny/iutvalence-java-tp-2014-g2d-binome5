@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.SwingConstants;
 
 import fr.iutvalence.java.tp.mastermind.Color;
 
@@ -68,6 +69,9 @@ public class ColorButton extends JButton implements ActionListener
 			return java.awt.Color.WHITE;
 			
 		  }	
+	/**
+	 * Méthode qui permet de colorer le bouton
+	 */
 	
 	public void paintComponent(Graphics g){
 		Graphics2D g2d = (Graphics2D)g;
