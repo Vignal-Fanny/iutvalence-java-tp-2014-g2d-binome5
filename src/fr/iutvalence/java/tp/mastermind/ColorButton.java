@@ -11,7 +11,7 @@ import fr.iutvalence.java.tp.mastermind.Color;
 
 /**
  * @author vignalfa
- *Class qui permet de crÃ©er un bouton colorÃ©
+ *Class qui permet de créer un bouton coloré
  */
 public class ColorButton extends JButton implements ActionListener
 {
@@ -34,7 +34,7 @@ public class ColorButton extends JButton implements ActionListener
 	}
 	
 	/**
-	 * mÃ©thode qui permet de changer de couleur de bouton au clic
+	 * méthode qui permet de changer de couleur de bouton au clic
 	 */
 	public void onClick()
 	{
@@ -73,6 +73,6 @@ public class ColorButton extends JButton implements ActionListener
 		Graphics2D g2d = (Graphics2D)g;
 		g2d.setColor(this.colorConverter(this.colorOfTheButton));
 		g2d.fillRect(0, 0, this.getWidth(), this.getHeight()); //Si on veut un bouton rectangulaire
-		//g.fillOval(20, 20, 75, 75); plus tard nous mettrons la partie colorÃ©e du bouton dans un oval le reste du bouton n'apparaÃ®tra pas. Nous devons changer les dimensions de l'oval 
+		//g.fillOval(20, 20, 75, 75); plus tard nous mettrons la partie colorée du bouton dans un oval le reste du bouton n'apparaîtra pas. Nous devons changer les dimensions de l'oval 
 	}
 }
